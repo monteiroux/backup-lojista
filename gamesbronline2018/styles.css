@@ -1306,7 +1306,7 @@ div#blank-product-position1+.abas-custom:before {
     font-family: "Fontawesome";
 }
 
-.atributos ul li a, .atributos ul li a:hover,  {
+.atributos ul li a, .atributos ul li a:hover  {
     border: 1px solid #d8d8d8!important;
     box-shadow: none !important;
 }

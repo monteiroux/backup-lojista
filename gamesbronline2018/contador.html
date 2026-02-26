@@ -1,0 +1,93 @@
+$(document).ready(function(){
+
+
+
+	/* PARA CONFIGURAR CONTADOR ADICIONE A DATA E HORA NA SEQUENCIA ABAIXO
+	data = 'ANO, MES, DIA, HORAS, MINUTOS'*/
+	
+	var data = '2026,03,19, 00, 01';
+	
+	
+	/* PARA ALTERAR A IMAGEM DO CONTADOR SUBSTITUA O LINK ABAIXO COM A SUA IMAGEM ALTURA M¡XIMA PERMITIDA 340px */
+	var imagem ='https://cdn.awsli.com.br/945/945593/arquivos/crimm.png';
+	
+	/* PARA ALTERAR O LINK DO CONTADOR SUBSTITUA O LINK ABAIXO A PARTIR DA BARRA(/) */
+	
+var link = 'https://www.gamesbronline2018.com/crimson-desert-ps5-digital-';
+	
+	
+	
+	
+	
+	
+	
+	/*
+		N√O MEXER NO C”DIGO A BAIXO
+	*/
+	
+
+	
+	
+	// CONTADOR HOMEPAGE
+	$(".pagina-inicial #corpo").before(
+		'<div class="contador">'+
+			'<div class="conteiner">'+
+					'<div class="row-fluid">'+
+					'<a href="'+ link +'"></a>'+
+						'<div style="background-image: url('+ imagem +');" class="cooldown cd-home span12" data-date="'+ data +'">'+
+							'<a href="#">'+
+							'<div class="cd-data"></div>'+
+							'<div class="cd-dia"></div>'+
+							'<div class="cd-hora"></div>'+
+							'<div class="cd-minuto"></div>'+
+							'<div class="cd-segundo"></div>'+
+							'</a>'+
+						'</div>'+
+					'</div>'+
+			'</div>'+
+		'</div>');
+	
+	function atualizaContador($dateString) {
+	var dateSplit = $dateString.split(',');
+	var YY = dateSplit[0].trim();
+	var MM = dateSplit[1].trim();
+	var DD = dateSplit[2].trim();
+	var HH = dateSplit[3].trim();
+	var MI = dateSplit[4].trim();
+	var SS = 00;
+	var hoje = new Date();
+	var futuro = new Date(YY, MM - 1, DD, HH, MI, SS);
+	var ss = parseInt((futuro - hoje) / 1000);
+	var mm = parseInt(ss / 60);
+	var hh = parseInt(mm / 60);
+	var dd = parseInt(hh / 24);
+	ss = ss - (mm * 60);
+	mm = mm - (hh * 60);
+	hh = hh - (dd * 24);
+	var resultDay = dd;
+	var resultHour = (toString(hh).length) ? hh : '';
+	var resultMin = ((mm < 10) ? "0" : "") + mm;
+	var resultSeg = ((ss < 10) ? "0" : "") + ss;
+	if (dd + hh + mm + ss > 0) {
+	$('.cd-dia').html(resultDay);
+	$('.cd-hora').html(resultHour);
+	$('.cd-minuto').html(resultMin);
+	$('.cd-segundo').html(resultSeg);
+	setTimeout(function() {
+	atualizaContador($dateString)
+	}, 1000);
+	} else {
+	$('.cd-dia').html('00');
+	$('.cd-hora').html('00');
+	$('.cd-minuto').html('00');
+	$('.cd-segundo').html('00');
+	setTimeout(function() {
+	atualizaContador($dateString)
+	}, 1000);
+	}
+	}
+	$dateString = $('.cooldown').attr('data-date');
+	var t = atualizaContador($dateString);
+	
+	
+	});
