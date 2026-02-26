@@ -1,0 +1,100 @@
+<!-- AJUSTES RODAPE -->
+
+<script>
+    
+    $(document).ready(function (){
+    
+        $('#rodape .institucional .row-fluid > .span9').prepend($('.sobre-loja-rodape'));
+        $('#rodape .institucional .row-fluid > .span9 > .row-fluid').prepend(`
+    
+        <div class="span4 contato_rodape">
+            <div class="whatsrp">
+                <strong>Fale conosco no WhatsApp</strong>
+                <span><i class="fa fa-whatsapp"></i>(51) 93618-9806-</span>
+            </div>
+            <div class="mailrp">
+                <strong>Fale conosco no E-mail</strong>
+                <span><i class="fa fa-envelope"></i>nexusgamesdigitalstore@outlook.com</span>
+            </div>
+            <div class="horariorp">
+                <strong>Horário de atendimento</strong>
+                <span><i class="fa fa-clock-o"></i>Segunda a Sexta: 10:00 ás 00:00h <br>
+                    Sábado e Domingos: 10:00 ás 00:00h</span>
+            </div>
+            <div class="enderecorp">
+                <strong>Endereço</strong>
+                <span><i class="fa fa-map-marker"></i>R MOREIRA DA SILVA, 14, SARANDI - PORTO ALEGRE - RS CEP 91110-360</span>
+            </div>
+        </div>
+    
+        `);
+    
+    });
+    
+    
+    </script>
+    
+    <style>
+        @media screen and (min-width: 768px) {
+    
+    #rodape .institucional .row-fluid > .span9 {
+        width: 100%;
+        display: flex;
+    }
+    
+    #rodape .institucional {
+          text-align: left;
+          padding: 20px 0 40px;
+        
+    }
+    
+    #rodape .titulo {
+        text-transform: none;
+        font-weight: 600;
+        font-size: 17px;
+    }
+    
+    .links-rodape-paginas>ul>li a {
+        text-transform: none;
+        line-height: normal;
+        font-weight: normal;
+    }
+    
+    .links-rodape-categorias a {
+        text-transform: none;
+        line-height: normal;
+        font-size: 14px;
+    }
+    
+    .contato_rodape {
+        padding: 20px 0;
+    }
+    
+    .span4.contato_rodape i {
+        margin-right: 5px;
+        font-size: 14px;
+    }
+    
+    .span4.contato_rodape strong {
+        margin-bottom: 2px;
+    }
+    
+    .span4.contato_rodape > div {
+            display: flex;
+            flex-direction: column;
+    }
+    
+    #rodape .institucional .row-fluid > .span9 > .row-fluid {
+        margin-left: 40px;
+    }
+    
+    
+    
+    .span4.contato_rodape {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    }
+    </style>

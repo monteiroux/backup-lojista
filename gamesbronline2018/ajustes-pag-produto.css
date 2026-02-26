@@ -1,0 +1,19 @@
+.ts-theme-dark {
+    background-color: #ffffff;
+    text-color: #444;
+    border-color: #949e99;
+}
+
+strong {
+    font-weight: bold;
+    COLOR: BLACK ! IMPORTANT;
+}
+
+.trustvox-widget b, .trustvox-widget strong, .text-center, .trustvox-widget span, .ts-rating-component .ts-rating-summary .ts-v-rating-note_value[data-v-5bc02ed5], .trustvox-widget span, .ts-rating-component .ts-rating-summary p[data-v-5bc02ed5], .ts-no-reviews .ts-store-last-months span[data-v-09406a1b], .ts-v-footer-container[data-v-d068742e], .trustvox-widget .ts-customer-questions__title, .ts-customer-questions .emptyQuestion span[data-v-4afd8c42], .ts-section h2[data-v-3be886ac] {
+    color: #444;
+}
+
+.ts-v-footer-logo.ts-logo[data-v-d068742e]
+ {
+    filter: invert(1);
+}
